@@ -10,6 +10,19 @@
     ></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Company Web</title>
+    <script>
+      // initialize and add the map
+      function initmap() {
+        // The location of Uluru
+        const uluru = { lat: 58.349451, lng: 26.714695 };
+        // the map, centered at Ulurur
+        const map = new google.maps.map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+          map: map,
+        });
+      }
+    </script>
   </head>
   <body id="home">
     <!--navbar-->
@@ -80,8 +93,8 @@
               <h3>Silume</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias esse pus assumenda fugit hic
-                adipisci, dolor quos rerum!
+                Molestias esse pus assumenda fugit hic adipisci, dolor quos
+                rerum!
               </p>
             </div>
           </div>
@@ -90,25 +103,73 @@
     </section>
     <!--who-->
     <section id="who">
-    <div class="who-img"></div>
-    <div>
-        <h2 class="m-heading">Kes <span class="text-primary">Me</span> Oleme</h2>
-    </div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam quia, sunt repudiandae nisi fugiat corrupti amet modi praesentium blanditiis.</p>
-    <h3>Meie meeskond</h3>
-    <ul>
-        <li>Kaval Ant: projektijuht</li>
-        <li>Puna Mütsike: arendusjuht</li>
-        <li>Lumi Valguke: konsultant</li>
-        <li>Jõulu Vana: arendaja</li>
-    </ul>
-    </div>
+      <div class="who-img"></div>
+      <div class="bg-dark p-1">
+        <h2 class="m-heading">
+          Kes <span class="text-primary">Me</span> Oleme
+        </h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam
+          quia, sunt repudiandae nisi fugiat corrupti amet modi praesentium
+          blanditiis.
+        </p>
+        <h3>Meie meeskond</h3>
+        <ul>
+          <li>Kaval Ant: projektijuht</li>
+          <li>Puna Mütsike: arendusjuht</li>
+          <li>Lumi Valguke: konsultant</li>
+          <li>Jõulu Vana: arendaja</li>
+        </ul>
+      </div>
     </section>
     <!--#clients-->
-    <section id="clients"></section>
+    <section id="clients">
+      <div class="bg-light py-1">
+        <h2 class="m-heading text-center">
+          Meie <span class="text-primary">Kliendid</span>
+        </h2>
+        <div class="py-1 items">
+          <div><img src="./img/logo1.png" alt="Klient1" /></div>
+          <div><img src="./img/logo2.png" alt="Klient2" /></div>
+          <div><img src="./img/logo3.png" alt="Klient3" /></div>
+          <div><img src="./img/logo4.png" alt="Klient4" /></div>
+          <div><img src="./img/logo5.png" alt="Klient5" /></div>
+        </div>
+      </div>
+    </section>
 
     <!--#contact-->
-    <section id="contact"></section>
+    <section id="contact">
+      <!--form-->
+      <div class="p-1 bg-primary contact-form">
+        <h2 class="m-heading">Võta meiega ühendust</h2>
+        <p>Täida allolev vorm</p>
+        <form action="">
+          <div class="form-group">
+            <label for="name">Nimi</label>
+            <input type="text" id="name" placeholder="Sisesta oma nimi" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Sisesta oma email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input
+              type="phone"
+              id="phone"
+              placeholder="Sisesta oma telefoninumber"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Sõnum</label>
+            <textarea id="message" placeholder="Sisesta oma sõnum"> </textarea>
+          </div>
+          <input type="submit" value="Saada" class="btn btn-dark" />
+        </form>
+      </div>
+      <div id="map" class="contact-map"></div>
+    </section>
 
     <footer id="footer"></footer>
   </body>
